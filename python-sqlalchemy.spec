@@ -6,6 +6,7 @@ License:	MIT
 Group:		Development/Python
 URL:		http://www.sqlalchemy.org/
 Source0:	http://dl.sf.net/sqlalchemy/SQLAlchemy-%{version}.tar.gz
+BuildRequires:	python-devel
 BuildRequires:	python-setuptools
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
