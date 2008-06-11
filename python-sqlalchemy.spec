@@ -1,6 +1,6 @@
 Summary:	SQL toolkit and object relational mapper for Python
 Name:		python-sqlalchemy
-Version:	0.3.11
+Version:	0.4.6
 Release:	%mkrel 1
 License:	MIT
 Group:		Development/Python
@@ -23,19 +23,19 @@ supports MySQL, Postgres, Oracle, and SQLite.
 %setup -q -n SQLAlchemy-%{version}
 
 %build
-python setup.py build
+%__python setup.py build
 
 %install
-rm -rf %{buildroot}
+%__rm -rf %{buildroot}
 
-python setup.py install --skip-build --root=%{buildroot} --install-purelib=%{python_sitelib}
+%__python setup.py install --skip-build --root=%{buildroot} --install-purelib=%{python_sitelib}
 
 %clean
-rm -rf %{buildroot}
+%__rm -rf %{buildroot}
 
 %files
 %defattr(-, root, root, 0755)
-%doc LICENSE README doc/* examples
+%doc CHANGES LICENSE README doc/* examples
 %{python_sitelib}/sqlalchemy/
 %{python_sitelib}/SQLAlchemy-%{version}-py*.egg-info/
 
