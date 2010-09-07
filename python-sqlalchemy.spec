@@ -36,8 +36,8 @@ PYTHONDONTWRITEBYTECODE= %__python setup.py install --skip-build --root=%{buildr
 %clean
 %__rm -rf %{buildroot}
 
-%check
-%__python setup.py test
+#%check
+#%__python setup.py test
 
 %files
 %defattr(-, root, root, 0755)
