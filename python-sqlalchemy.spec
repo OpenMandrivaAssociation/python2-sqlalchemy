@@ -42,4 +42,4 @@ rm -rf %{buildroot}
 %doc CHANGES LICENSE README doc/* examples
 %{python_sitelib}/sqlalchemy/*
 %{python_sitelib}/%{module_name}-%{version}-py*.egg-info/
-%{_libdir}/python2.7/site-packages/sqlalchemy_nose/
+%{python_sitelib}/sqlalchemy_nose/
