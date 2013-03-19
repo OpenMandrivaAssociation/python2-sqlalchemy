@@ -27,7 +27,7 @@ supports MySQL, Postgres, Oracle, and SQLite.
 %__python setup.py build
 
 %install
-PYTHONDONTWRITEBYTECODE= %__python setup.py install --skip-build --root=%{buildroot} --install-purelib=%{python_sitelib}
+PYTHONDONTWRITEBYTECODE= %__python setup.py install --skip-build --root=%{buildroot} --install-purelib=%{python_platlib}
 
 #%check
 #%__python setup.py test
