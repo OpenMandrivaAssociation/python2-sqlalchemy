@@ -1,2 +1,4 @@
+removed_sources:
+  SQLAlchemy-0.6.6.tar.gz: 6ed990141710b95a583b3e22cbd5c0eeff5076c5
 sources:
-  "SQLAlchemy-0.6.6.tar.gz": 6ed990141710b95a583b3e22cbd5c0eeff5076c5
+  SQLAlchemy-0.7.9.tar.gz: 3768755cd2276765777dc3c7517af737bf9e58a1

@@ -2,14 +2,12 @@
 
 Summary:	SQL toolkit and object relational mapper for Python
 Name:		python-sqlalchemy
-Version:	0.6.6
-Release:	%mkrel 3
+Version:	0.7.9
+Release:	1
 License:	MIT
 Group:		Development/Python
 URL:		http://www.sqlalchemy.org/
-Source0:	http://pypi.python.org/packages/source/S/%{module_name}/%{module_name}-%{version}.tar.gz
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildArch:	noarch
+Source0:	http://pypi.python.org/packages/source/S/SQLAlchemy/SQLAlchemy-%{version}.tar.gz
 BuildRequires:	python-setuptools
 BuildRequires:	python-nose
 %py_requires -d
@@ -31,18 +29,15 @@ supports MySQL, Postgres, Oracle, and SQLite.
 %install
 PYTHONDONTWRITEBYTECODE= %__python setup.py install --skip-build --root=%{buildroot} --install-purelib=%{python_sitelib}
 
-%clean
-rm -rf %{buildroot}
-
 #%check
 #%__python setup.py test
 
 %files
 %defattr(-, root, root, 0755)
-%doc CHANGES LICENSE README doc/* examples
+%doc CHANGES LICENSE README* doc/* examples
 %{python_sitelib}/sqlalchemy/*
 %{python_sitelib}/%{module_name}-%{version}-py*.egg-info/
-%{python_sitelib}/sqlalchemy_nose/
+#%{python_sitelib}/sqlalchemy_nose/
 
 
 %changelog
@@ -135,3 +130,4 @@ rm -rf %{buildroot}
 
 * Sun Jan 20 2008 Oden Eriksson <oeriksson@mandriva.com> 0.3.11-1.RHEL4
 - initial Redhat RHEL4 package.
+
