@@ -35,8 +35,8 @@ PYTHONDONTWRITEBYTECODE= %__python setup.py install --skip-build --root=%{buildr
 %files
 %defattr(-, root, root, 0755)
 %doc CHANGES LICENSE README* doc/* examples
-%{py_platlibdir}/sqlalchemy/*
-%{py_platlibdir}/%{module_name}-%{version}-py*.egg-info/
+%{py_platsitedir}/sqlalchemy/*
+%{py_platsitedir}/%{module_name}-%{version}-py*.egg-info/
 #%{python_sitelib}/sqlalchemy_nose/
 
 
