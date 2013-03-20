@@ -27,7 +27,7 @@ supports MySQL, Postgres, Oracle, and SQLite.
 %__python setup.py build
 
 %install
-PYTHONDONTWRITEBYTECODE= %__python setup.py install --skip-build --root=%{buildroot} --install-purelib=%{python_platlib}
+PYTHONDONTWRITEBYTECODE= %__python setup.py install --skip-build --root=%{buildroot} --install-purelib=%{py_platlibdir}
 
 #%check
 #%__python setup.py test
@@ -35,8 +35,8 @@ PYTHONDONTWRITEBYTECODE= %__python setup.py install --skip-build --root=%{buildr
 %files
 %defattr(-, root, root, 0755)
 %doc CHANGES LICENSE README* doc/* examples
-%{python_platlib}/sqlalchemy/*
-%{python_platlib}/%{module_name}-%{version}-py*.egg-info/
+%{py_platlibdir}/sqlalchemy/*
+%{py_platlibdir}/%{module_name}-%{version}-py*.egg-info/
 #%{python_sitelib}/sqlalchemy_nose/
 
 
