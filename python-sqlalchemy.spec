@@ -2,8 +2,8 @@
 
 Summary:	SQL toolkit and object relational mapper for Python
 Name:		python-sqlalchemy
-Version:	0.7.9
-Release:	2
+Version:	0.8.1
+Release:	1
 License:	MIT
 Group:		Development/Python
 URL:		http://www.sqlalchemy.org/
@@ -130,4 +130,5 @@ PYTHONDONTWRITEBYTECODE= %__python setup.py install --skip-build --root=%{buildr
 
 * Sun Jan 20 2008 Oden Eriksson <oeriksson@mandriva.com> 0.3.11-1.RHEL4
 - initial Redhat RHEL4 package.
+
 
