@@ -1,4 +1,7 @@
 %define module_name SQLAlchemy
+%ifarch %arm %mips
+%define debug_package %nil
+%endif
 
 Summary:	SQL toolkit and object relational mapper for Python
 Name:		python-sqlalchemy
