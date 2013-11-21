@@ -9,11 +9,11 @@ Version:	0.8.2
 Release:	1
 License:	MIT
 Group:		Development/Python
-URL:		http://www.sqlalchemy.org/
+Url:		http://www.sqlalchemy.org/
 Source0:	http://pypi.python.org/packages/source/S/SQLAlchemy/SQLAlchemy-%{version}.tar.gz
-BuildRequires:	python-setuptools
 BuildRequires:	python-nose
-BuildRequires:	python-devel
+BuildRequires:	python-setuptools
+BuildRequires:	pkgconfig(python)
 
 %description
 %{module_name} is a SQL toolkit and object relational mapper for Python. It
@@ -24,7 +24,7 @@ supports MySQL, Postgres, Oracle, and SQLite.
 
 %prep
 
-%setup -q -n %{module_name}-%{version}
+%setup -qn %{module_name}-%{version}
 
 %build
 %__python setup.py build
@@ -36,8 +36,8 @@ PYTHONDONTWRITEBYTECODE= %__python setup.py install --skip-build --root=%{buildr
 #%__python setup.py test
 
 %files
-%defattr(-, root, root, 0755)
 %doc CHANGES LICENSE README* doc/* examples
 %{py_platsitedir}/sqlalchemy/*
 %{py_platsitedir}/%{module_name}-%{version}-py*.egg-info/
-#%{python_sitelib}/sqlalchemy_nose/
+#{python_sitelib}/sqlalchemy_nose/
+
