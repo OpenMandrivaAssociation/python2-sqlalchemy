@@ -13,7 +13,7 @@ URL:		http://www.sqlalchemy.org/
 Source0:	http://pypi.python.org/packages/source/S/SQLAlchemy/SQLAlchemy-%{version}.tar.gz
 BuildRequires:	python-setuptools
 BuildRequires:	python-nose
-%py_requires -d
+BuildRequires:	pkgconfig(python)
 
 %description
 %{module_name} is a SQL toolkit and object relational mapper for Python. It
