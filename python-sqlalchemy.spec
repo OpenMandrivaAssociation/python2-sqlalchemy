@@ -6,8 +6,8 @@
 Summary:	SQL toolkit and object relational mapper for Python
 
 Name:		python-sqlalchemy
-Version:	0.9.4
-Release:	3
+Version:	0.9.6
+Release:	1
 License:	MIT
 Group:		Development/Python
 Url:		http://www.sqlalchemy.org/
@@ -41,6 +41,3 @@ PYTHONDONTWRITEBYTECODE= %__python setup.py install --skip-build --root=%{buildr
 %{py_platsitedir}/sqlalchemy/*
 %{py_platsitedir}/%{module_name}-%{version}-py*.egg-info/
 #{python_sitelib}/sqlalchemy_nose/
-
-
-

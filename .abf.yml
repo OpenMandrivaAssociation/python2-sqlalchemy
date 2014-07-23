@@ -1,5 +1,6 @@
 removed_sources:
   SQLAlchemy-0.8.2.tar.gz: 9844a3d7a9344dfe8243da4b125a273ff39fbce7
   SQLAlchemy-0.9.3.tar.gz: 1b5dba979d3ed7365cd09f6d9a6bf6be746310f0
-sources:
   SQLAlchemy-0.9.4.tar.gz: a6865be94ddfdb618af156b56174ec6bff942653
+sources:
+  SQLAlchemy-0.9.6.tar.gz: ddff5593e7f83d9d0b0bda0223b7b85344843cba
