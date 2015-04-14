@@ -6,16 +6,16 @@
 
 Summary:	SQL toolkit and object relational mapper for Python
 
-Name:		python-sqlalchemy
+Name:		python2-sqlalchemy
 Version:	0.9.8
 Release:	2
 License:	MIT
 Group:		Development/Python
 Url:		http://www.sqlalchemy.org/
 Source0:	http://pypi.python.org/packages/source/S/SQLAlchemy/SQLAlchemy-%{version}.tar.gz
-BuildRequires:	python-nose
-BuildRequires:	python-setuptools
-BuildRequires:	pkgconfig(python)
+BuildRequires:	python2-nose
+BuildRequires:	python2-setuptools
+BuildRequires:	pkgconfig(python2)
 
 %description
 %{module_name} is a SQL toolkit and object relational mapper for Python. It
@@ -29,16 +29,16 @@ supports MySQL, Postgres, Oracle, and SQLite.
 %setup -qn %{module_name}-%{version}
 
 %build
-%__python setup.py build
+%__python2 setup.py build
 
 %install
-PYTHONDONTWRITEBYTECODE= %__python setup.py install --skip-build --root=%{buildroot} --install-purelib=%{py_platlibdir}
+PYTHONDONTWRITEBYTECODE= %__python2 setup.py install --skip-build --root=%{buildroot} --install-purelib=%{py2_platlibdir}
 
 #%check
 #%__python setup.py test
 
 %files
 %doc CHANGES LICENSE README* doc/* examples
-%{py_platsitedir}/sqlalchemy/*
-%{py_platsitedir}/%{module_name}-%{version}-py*.egg-info/
+%{py2_platsitedir}/sqlalchemy/*
+%{py2_platsitedir}/%{module_name}-%{version}-py*.egg-info/
 #{python_sitelib}/sqlalchemy_nose/
