@@ -8,7 +8,7 @@ Version:	0.9.8
 Release:	2
 License:	MIT
 Group:		Development/Python
-Url:		http://www.sqlalchemy.org/
+Url:		https://www.sqlalchemy.org/
 Source0:	http://pypi.python.org/packages/source/S/SQLAlchemy/SQLAlchemy-%{version}.tar.gz
 BuildRequires:	python2-nose
 BuildRequires:	python2-setuptools
